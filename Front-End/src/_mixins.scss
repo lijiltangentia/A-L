@@ -1,0 +1,102 @@
+
+@mixin warning {
+    background-color: orange;
+    color: #fff;
+  }
+  
+  @mixin large-text {
+    font: {
+      size: 22px;
+      weight: bold;
+    }
+  }
+  @mixin box-shadow($shadows...) {
+    box-shadow: $shadows!important;
+    -moz-box-shadow: $shadows!important;
+    -webkit-box-shadow: $shadows!important;
+  }
+  @mixin radius($borderradius...) {
+    border-radius: $borderradius!important;
+    -moz-border-radius: $borderradius!important;
+    -webkit-border-radius: $borderradius!important;
+  }
+  @mixin button{
+    line-height: 20px;
+    align-items: center;
+    display: flex;
+  }
+  @mixin btn-outline{
+    border: solid 1px $primarybtn-color!important;
+    background-color: transparent;
+    color: $primarybtn-color;
+
+  }
+  @mixin img-gbody{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @mixin transition{
+  -webkit-transition: all .4s ease-out; 
+  transition: all .4s ease-out;
+  }
+  @mixin transitionmd{
+    -webkit-transition: all .2s ease-out; 
+    transition: all .3s ease-out;
+    }
+  @mixin transition-fast{
+    -webkit-transition: all .3s ease-out;
+    transition: all .3 ease-out;
+    }
+  @mixin cardeffect{
+    box-shadow:none;
+    transition: all .2s;
+    //border: 1px solid rgba(26,54,126,0.125);
+    background-color: #fff;
+    @include radius(10px);
+    // overflow: hidden;
+    
+  }
+  @mixin cardshadow-invert{
+    box-shadow: -1px 0rem 1rem 0px rgba(44, 51, 73, 0.06)!important;
+    -moz-box-shadow:-1px 0rem 1rem 0px rgba(44, 51, 73, 0.06)!important;
+    -webkit-box-shadow: -1px 0rem 1rem 0px rgba(44, 51, 73, 0.06)!important;
+    border: solid 1px rgba(220, 220, 220, 0.341176)!important;
+  }
+  @mixin rounded{
+    @include radius(50%);
+  }
+  @mixin forn-input{
+    border: none;
+    border-bottom: solid 2px $bordergrey-color;
+    //@include radius(23px);
+    padding:10px 0px;
+    height: 2.75rem;
+    font-size:rem(18px);
+    &::placeholder{
+      color: ($primarytextdark-color,.9);
+      font-size: rem(15px);
+    }
+  }
+  @mixin transition{
+    transition: all ease-out 0.4s;
+  }
+  @mixin ulli{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  //px to rem conversion
+  @function rem($pixels, $context: $base-font-size) {
+    @return ($pixels / $context) * 1rem;
+  }
+  
+  // border-separator
+  @mixin border-separator-style1{
+    border-right: 1px rgba(204, 204, 204, 0.47) solid;
+  }
+  
+
+
+  

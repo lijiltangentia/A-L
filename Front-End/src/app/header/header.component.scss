@@ -1,0 +1,23 @@
+@import "../../variables";
+@import "../../mixins";
+@import "../../responsive";
+@import "../../static";
+
+
+.h-button{
+    background: url(../../assets/menu.png) no-repeat center center;
+    width: 45px;
+    height: 45px;
+    background-size: 26px;
+    border: none;
+}
+.app-logo{
+    max-width: 248px;
+    margin: 0 15px;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: $primary-color;
+    height: 60px;
+}
